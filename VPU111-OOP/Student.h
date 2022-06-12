@@ -13,33 +13,36 @@ class Student
 	int sizeMark = 0;
 
 public:
-	Student();
+	Student() : Student("No name", 0) { cout << "Створення студента 0 param" << endl; }
 	Student(const char* n, int a);
+	~Student();
 	void print();
 	void setAge(int a);
 	void setName(const char* n);
 	int  getAge();
 	char* getName();
 	void setMark(int m);
+
 };
 
 
-Student::Student()
-{
-	setAge(0);
-	setName("No name");
-}
-
 Student::Student(const char* n, int a)
 {
-	cout << "Створення студента" << endl;
-	setAge(a);
-	setName(n);
+	cout << "Створення студента 2 param" << endl;
+	this->setAge(a);
+	this->setName(n);
+}
+
+Student::~Student()
+{
+	delete name;
+	delete[] mark;
+	cout << "Destructor" << endl;
 }
 
 void Student::print()
 {
-	cout << "Ім`я: " << name << ", Вік: " << age << ", Оцінки: ";
+	cout << "Ім`я: " << this->name << ", Вік: " << age << ", Оцінки: ";
 	printArray(mark, sizeMark);
 }
 
