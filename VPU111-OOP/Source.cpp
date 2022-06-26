@@ -51,7 +51,7 @@ int main()
 	//st.print();
 	//{
 	//	//1
-	//	//Student st2(st);
+	//	//Student st2(st); //Student st2 = st;
 	//	//st2.print();
 
 	//	//2
@@ -94,9 +94,28 @@ int main()
 	// >>, <<, [], new 
 
 	Drob d1(4, 5);
-	Drob d2(3, 7);
-	Drob d3 = d1 - d2; // d1.operator-(d2)
-	cout << d3 << endl;
+	Drob d2(8, 10);
+	//(d1++).print(); // d1.operator-(d2)
+	//d1.print();
+	//Drob d3 = -d1;
+	//d3.print();
+	d1 = d2 * 4;
+	d1 = 4 * d1;
+	if (d1 == d2)
+		cout << "d1 > d2" << endl;
+	else
+		cout << "d1 <= d2" << endl;
+	//cout << d3 << endl;
+	
+	
+	/*Student st("Ôåä³ð", 20);
+	{
+		Student st2("Olga", 25);
+		st2.print();
+		st2 = st2;
+		st2.print();
+	}
+	st.print();*/
 
 	//cout << "Ïðèâ³ò" << endl;
 	//
