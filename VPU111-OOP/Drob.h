@@ -78,8 +78,3 @@ Drob operator+(Drob d1, Drob d2)
 {
 	return Drob();
 }
-
-Drob operator*(int d1, Drob d2)
-{
-	return Drob();
-}

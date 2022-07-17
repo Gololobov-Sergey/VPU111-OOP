@@ -3,10 +3,10 @@
 
 using namespace std;
 
-
+template<class T>
 class Array
 {
-	int* arr = nullptr;
+	T* arr = nullptr;
 	int size = 0;
 
 public:
@@ -15,7 +15,7 @@ public:
 	explicit Array(int n)
 	{
 		size = n;
-		arr = new int[n] {0};
+		arr = new T[n] {0};
 	}
 
 	~Array()
@@ -26,7 +26,7 @@ public:
 	Array(const Array& obj)
 	{
 		size = obj.size;
-		arr = new int[size];
+		arr = new T[size];
 		for (size_t i = 0; i < size; i++)
 		{
 			arr[i] = obj.arr[i];
@@ -49,5 +49,13 @@ public:
 		}
 		cout << endl;
 	}
+
+	T& operator[](int ind);
+
 };
 
+template<class T>
+T& Array<T>::operator[](int ind)
+{
+	return arr[ind];
+}

@@ -19,7 +19,8 @@ Student foo1()
 	return st;
 }
 
-void PrintArray(Array a)
+template<class T>
+void PrintArray(Array<T> a)
 {
 	a.print();
 }
@@ -29,6 +30,21 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	SetConsoleTitleA("VPU111-OOP");
+
+	const int n = 10;
+	int arr[n] = { 1,2,3,4,5,6,7,8,9,10 };
+	printArray(arr, n);
+
+	//cout << Sum(arr, 3, Drob(2,4)) << endl;
+
+	/*int a = 9;
+	float b = 8.8;
+
+	decltype(a+b) x;*/
+
+	Array<int> a(10);
+	a.set();
+	a.print();
 
 	//Student student[2];
 	/*student[0].setAge(30);

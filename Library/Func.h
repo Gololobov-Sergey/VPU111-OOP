@@ -3,6 +3,7 @@
 
 using namespace std;
 
+
 template<class T>
 void addElemArray(T*& arr, int& size, T elem)
 {
@@ -18,7 +19,7 @@ void addElemArray(T*& arr, int& size, T elem)
 }
 
 template<class T>
-void printArray(const T* arr, int size)
+void printArray(T* arr, int size)
 {
 	for (size_t i = 0; i < size; i++)
 	{
@@ -27,3 +28,8 @@ void printArray(const T* arr, int size)
 	cout << endl;
 }
 
+template<class T1, class T2, class T3>
+auto Sum(T1 a, T2 b, T3 c)-> decltype(a+b)
+{
+	return a + b + c;
+}
